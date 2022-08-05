@@ -34,7 +34,7 @@ args = parser.parse_args()
 data_path = "data/"
 anno_file = data_path + 'annotation_boxes.json'
 data_split_file = data_path + 'Train_Test_Val_boxes.json'
-im_dir = data_path + 'images dataset'
+im_dir = data_path + 'image dataset'
 gt_dir = data_path + 'gt_density_map_adaptive'
 
 if not exists(args.output_dir):
@@ -62,7 +62,7 @@ with open(data_split_file) as f:
     data_split = json.load(f)
 
 def train():
-    print("Training on FSC147 train set data")
+    print("Training on Boxes train set data")
     im_ids = data_split['train']
     random.shuffle(im_ids)
     train_mae = 0
